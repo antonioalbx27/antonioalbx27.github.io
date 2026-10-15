@@ -1,8 +1,8 @@
-var fechaCreacion = 2026;
-let alias = "Sombra";
+var fechaCreacion = 1999;
+let alias = "Goku Black";
 const RANGO_MAX = "Leyenda";
 
-let clase = "Pícaro";
+let clase = "RenGoku";
 let nivel = 42;
 let vida = 95.5;
 let estaVivo = true;
@@ -12,12 +12,12 @@ let tituloEspecial;
 let puntuaciones = [1200, 4500, 3100, 5000];
 
 let personaje = {
-  alias: "Sombra",
-  nivel: 42,
+  alias: "Goku Black",
+  nivel: 9999,
   estaVivo: true
 };
 
-function obtenerFicha() {
+function obtenerGokuBlack() {
   return "Personaje: " + alias;
 }
 
@@ -34,18 +34,18 @@ function mostrarPuntuaciones() {
 function salidaLog() {
   console.log("==== console.log(): variables y tipos ====");
 
-  mostrarTipo(fechaCreacion, "fechaCreacion (var)");
-  mostrarTipo(alias, "alias (let)");
-  mostrarTipo(RANGO_MAX, "RANGO_MAX (const)");
-  mostrarTipo(clase, "clase");
-  mostrarTipo(nivel, "nivel");
-  mostrarTipo(vida, "vida");
-  mostrarTipo(estaVivo, "estaVivo");
-  mostrarTipo(clan, "clan");
+  mostrarTipo(fechaCreacion);
+  mostrarTipo(alias);
+  mostrarTipo(RANGO_MAX);
+  mostrarTipo(clase);
+  mostrarTipo(nivel);
+  mostrarTipo(vida);
+  mostrarTipo(estaVivo);
+  mostrarTipo(clan);
   mostrarTipo(tituloEspecial, "tituloEspecial");
   mostrarTipo(puntuaciones, "puntuaciones (array)");
   mostrarTipo(personaje, "personaje (objeto)");
-  mostrarTipo(obtenerFicha, "obtenerFicha (función)");
+  mostrarTipo(obtenerGokuBlack, "obtenerGokuBlack (función)");
 
   mostrarPuntuaciones();
 
@@ -56,13 +56,13 @@ function salidaLog() {
 }
 
 function salidaInfo() {
-  console.info("==== console.info(): llamando a la función obtenerFicha() ====");
+  console.info("==== console.info(): llamando a la función obtenerGokuBlack() ====");
 
-  let mensaje = obtenerFicha();
+  let mensaje = obtenerGokuBlack();
 
-  console.info("obtenerFicha() devuelve:", mensaje, "| tipo:", typeof mensaje);
+  console.info("obtenerGokuBlack() devuelve:", mensaje, "| tipo:", typeof mensaje);
 
-  mostrarResultado("console.info -> obtenerFicha() devolvió: " + mensaje);
+  mostrarResultado("console.info -> obtenerGokuBlack() devolvió: " + mensaje);
 }
 
 function salidaError() {

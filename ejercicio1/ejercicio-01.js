@@ -1,53 +1,53 @@
-var anio = 2026;
-let nombre = "Laura";
-const MODULO = "ADSI";
+var fechaCreacion = 2026;
+let alias = "Sombra";
+const RANGO_MAX = "Leyenda";
 
-let apellido = "García";
-let edad = 19;
-let nota = 8.75;
-let aprobado = true;
-let alumnoSinFoto = null;
-let direccion;
+let clase = "Pícaro";
+let nivel = 42;
+let vida = 95.5;
+let estaVivo = true;
+let clan = null;
+let tituloEspecial;
 
-let notas = [7, 8.5, 9, 6];
+let puntuaciones = [1200, 4500, 3100, 5000];
 
-let alumno = {
-  nombre: "Laura",
-  edad: 19,
-  aprobado: true
+let personaje = {
+  alias: "Sombra",
+  nivel: 42,
+  estaVivo: true
 };
 
-function saludar() {
-  return "Hola, " + nombre;
+function obtenerFicha() {
+  return "Personaje: " + alias;
 }
 
 function mostrarTipo(valor, etiqueta) {
   console.log(etiqueta + " =>", valor, "| tipo:", typeof valor);
 }
 
-function mostrarNotas() {
-  for (let i = 0; i < notas.length; i++) {
-    console.log("notas[" + i + "] =", notas[i], "| tipo:", typeof notas[i]);
+function mostrarPuntuaciones() {
+  for (let i = 0; i < puntuaciones.length; i++) {
+    console.log("puntuaciones[" + i + "] =", puntuaciones[i], "| tipo:", typeof puntuaciones[i]);
   }
 }
 
 function salidaLog() {
   console.log("==== console.log(): variables y tipos ====");
 
-  mostrarTipo(anio, "anio (var)");
-  mostrarTipo(nombre, "nombre (let)");
-  mostrarTipo(MODULO, "MODULO (const)");
-  mostrarTipo(apellido, "apellido");
-  mostrarTipo(edad, "edad");
-  mostrarTipo(nota, "nota");
-  mostrarTipo(aprobado, "aprobado");
-  mostrarTipo(alumnoSinFoto, "alumnoSinFoto");
-  mostrarTipo(direccion, "direccion");
-  mostrarTipo(notas, "notas (array)");
-  mostrarTipo(alumno, "alumno (objeto)");
-  mostrarTipo(saludar, "saludar (función)");
+  mostrarTipo(fechaCreacion, "fechaCreacion (var)");
+  mostrarTipo(alias, "alias (let)");
+  mostrarTipo(RANGO_MAX, "RANGO_MAX (const)");
+  mostrarTipo(clase, "clase");
+  mostrarTipo(nivel, "nivel");
+  mostrarTipo(vida, "vida");
+  mostrarTipo(estaVivo, "estaVivo");
+  mostrarTipo(clan, "clan");
+  mostrarTipo(tituloEspecial, "tituloEspecial");
+  mostrarTipo(puntuaciones, "puntuaciones (array)");
+  mostrarTipo(personaje, "personaje (objeto)");
+  mostrarTipo(obtenerFicha, "obtenerFicha (función)");
 
-  mostrarNotas();
+  mostrarPuntuaciones();
 
   mostrarResultado(
     "console.log -> 12 variables mostradas con typeof.\n" +
@@ -56,39 +56,39 @@ function salidaLog() {
 }
 
 function salidaInfo() {
-  console.info("==== console.info(): llamando a la función saludar() ====");
+  console.info("==== console.info(): llamando a la función obtenerFicha() ====");
 
-  let mensaje = saludar();
+  let mensaje = obtenerFicha();
 
-  console.info("saludar() devuelve:", mensaje, "| tipo:", typeof mensaje);
+  console.info("obtenerFicha() devuelve:", mensaje, "| tipo:", typeof mensaje);
 
-  mostrarResultado("console.info -> saludar() devolvió: " + mensaje);
+  mostrarResultado("console.info -> obtenerFicha() devolvió: " + mensaje);
 }
 
 function salidaError() {
   console.error("==== console.error(): ejemplo de dato incorrecto ====");
 
-  let notaTexto = "ocho";
-  let notaConvertida = parseInt(notaTexto);
+  let nivelTexto = "cuarenta";
+  let nivelConvertido = parseInt(nivelTexto);
 
-  if (isNaN(notaConvertida)) {
-    console.error('ERROR: "' + notaTexto + '" no se puede convertir a número → NaN');
+  if (isNaN(nivelConvertido)) {
+    console.error('ERROR: "' + nivelTexto + '" no se puede convertir a número → NaN');
   }
 
-  mostrarResultado("console.error -> 'ocho' convertida con parseInt() da NaN (error controlado).");
+  mostrarResultado("console.error -> 'cuarenta' convertida con parseInt() da NaN (error controlado).");
 }
 
 function salidaDebug() {
   console.debug("==== console.debug(): trazas de depuración ====");
 
-  console.debug("Edad antes de incrementar:", edad);
-  console.debug("Tipo de 'alumnoSinFoto':", typeof alumnoSinFoto, "→ ¡ojo, es object!");
+  console.debug("Nivel antes de subir:", nivel);
+  console.debug("Tipo de 'clan':", typeof clan, "→ ¡ojo, es object!");
 
-  edad = edad + 1;
+  nivel = nivel + 1;
 
-  console.debug("Edad después de incrementar:", edad);
+  console.debug("Nivel después de subir:", nivel);
 
-  mostrarResultado("console.debug -> edad incrementada: 19 -> " + edad + " (mira la consola F12)");
+  mostrarResultado("console.debug -> nivel incrementado: 42 -> " + nivel + " (mira la consola F12)");
 }
 
 const btnLog = document.getElementById("btn-log");
